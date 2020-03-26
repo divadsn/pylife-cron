@@ -1,2 +1,2 @@
-# pylife-update
-Repository containing scraping scripts to be executed via cron.
+# pylife-cron
+Repository containing updater script to be executed via cron.
