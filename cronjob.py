@@ -129,7 +129,7 @@ def execute_cron(force_update: bool):
         session = connect_db()
     except exc.SQLAlchemyError as error:
         logger.fatal("Could not connect to database!")
-        logger.fatal(error.orig) # pylint: disable=maybe-no-member
+        logger.fatal(error.orig)  # pylint: disable=maybe-no-member
         exit(1)
 
     logger.info("Downloading house data from \"http://panel.pylife.pl/domy\"...")
