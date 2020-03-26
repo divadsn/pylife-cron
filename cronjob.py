@@ -29,7 +29,7 @@ logging.basicConfig(format="%(asctime)s - %(name)s - %(levelname)s - %(message)s
 logger = logging.getLogger("cronjob")
 
 # Fix wrong timezone behavior in Python
-timezone = pytz.timezone("Europe/Warsaw")
+timezone = pytz.timezone(os.environ.get("TZ", "Europe/Warsaw"))
 
 # Trying to avoid as much trouble as possbile by "mocking" a real browser request
 custom_headers = {
