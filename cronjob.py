@@ -99,7 +99,7 @@ def get_house_details(id: int):
 
 def parse_date(date: str):
     dt = datetime.strptime(date, "%Y-%m-%d")
-    return timezone.localize(dt)
+    return timezone.localize(dt).astimezone(pytz.UTC).replace(tzinfo=None)
 
 
 def is_float(value: str):
